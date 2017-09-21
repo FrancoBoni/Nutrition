@@ -92,7 +92,8 @@ else: pass
 print("\n\nSo, let's get started. We will be segguesting different meals for your meals. "
       "\nStart telling us what would you like to have for breakfast\n\n ")
 
-Creating a class for food in order to store more than 1 value.
+
+#Creating a class for food in order to store more than 1 value.
 # Source: https://whatscookingamerica.net/NutritionalChart.htm
 
 
@@ -105,23 +106,21 @@ class Food:
         self.unit = unit
         self.healthiness = healthiness
 
-bread = Food("Bread", 90, 1, "ounce", "good")
-yogourt = Food("Yogourt", 80, 1, "ounce", "good")
+bread = Food("bread", 90, 1, "ounce", "good")
+yogourt = Food("yogourt", 80, 1, "ounce", "good")
 
-Breakfast_list = ("Yogourt","Bread")
-calorie = 2000
+breakfast_list = [yogourt,bread]
+calories_lef = 2000
 
-def getfoodpercalorie
-    
-    
+def getfoodpercalorie(self):
+        return self.calorie
+
+
+#for each food in your food list check if the food.name is equal to the input string
 
 while True:
     bf_choice = input("What are you having for breakfast? ")
-    if bf_choice.title() in Breakfast_list:
-        
-        calorie_left = calorie - calorie(bf_choice)
-        print(calorie_left)
-        print("Would you have anything else? ")
-    elif bf_choice == "nothing else":
-        break
-    else:continue
+    for food in breakfast_list:
+        if food.name == bf_choice:
+            print(food.calorie)
+    else: break
