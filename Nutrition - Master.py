@@ -1,14 +1,16 @@
 print("Hi! welcome to \"Cheff Malony!\" - The first chat bot that suggests meals based on your calories to burn. "
       "like a nutrition doctor.\nPlease, answer the following 4 questions in order to know your calories to burn.\n\n ")
-
+men_calories_to_burn = 0
+women_calories_to_burn = 0
+calories_left = 0
 
 #validate Gender
 while True:
-    Gender = input("Please enter your gender (\"M\" for Male \"F\" for Female): ").upper()
-    if Gender == "M":
+    gender = input("Please enter your gender (\"M\" for Male \"F\" for Female) > ").upper()
+    if gender == "M":
         print('Gender: Male')
         break
-    if Gender == "F":
+    if gender == "F":
         print("Gender: Female")
         break
     else:
@@ -24,7 +26,7 @@ def validAge(age):
         return False
 
 while True:
-    Age = input("Please enter your age: ")
+    Age = input("Please enter your age > ")
     if validAge(Age) is True:
         print("Age", int(Age))
         break
@@ -41,7 +43,7 @@ def validHeight(cm):
         return False
 
 while True:
-    Height = input("Please enter your height in centimetres(e.g.:172): ")
+    Height = input("Please enter your height in centimetres(e.g.:172) > ")
     if validHeight(Height) is True:
         print("Height", int(Height))
         break
@@ -58,7 +60,7 @@ def validWeight(Weight):
         return False
 
 while True:
-    Weight = input("Please enter your weight in kilograms as a whole number (e.g.:78): ")
+    Weight = input("Please enter your weight in kilograms as a whole number (e.g.:78) > ")
     if validWeight(Weight) is True:
         print("Weight", int(Weight))
         break
@@ -71,56 +73,71 @@ WeightForCalorie = int(Weight)
 AgeForCalorie = int(Age)
 HeightForCalorie = int(Height)
 
-def mencalories(weight,height,age):
+def men_calories_calculator(weight,height,age):
     men = 10*weight + 6.25*height - 5*age + 5
     return men
 
-def womancalories(weight,height,age):
+def woman_calories_calculator(weight,height,age):
     woman = 10*weight + 6.25*height - 5*age - 161
     return woman
 
-if Gender == "M":
-    MenCaloriesToBurn = mencalories(WeightForCalorie,HeightForCalorie,AgeForCalorie)
-    print("Your burning calorie per day is of", round(MenCaloriesToBurn))
-elif Gender == "F":
-    WomenCaloriesToBurn = womancalories(WeightForCalorie, HeightForCalorie, AgeForCalorie)
-    print("Your burning calorie per day is of", round(WomenCaloriesToBurn))
+if gender == "M":
+    men_calories_to_burn = men_calories_calculator(WeightForCalorie,HeightForCalorie,AgeForCalorie)
+    print("Your burning calorie per day is of", round(men_calories_to_burn))
+elif gender == "F":
+    women_calories_to_burn = woman_calories_calculator(WeightForCalorie, HeightForCalorie, AgeForCalorie)
+    print("Your burning calorie per day is of", round(women_calories_to_burn))
 else: pass
 
 
 #startin with your breackfast
-print("\n\nSo, let's get started. We will be segguesting different meals for your meals. "
-      "\nStart telling us what would you like to have for breakfast\n\n ")
-
+print("\n\nSo, let's get started. We will be segguesting different meals for your day ingest.\n ")
 
 #Creating a class for food in order to store more than 1 value.
 # Source: https://whatscookingamerica.net/NutritionalChart.htm
+if men_calories_to_burn != 0:
+    calories_left = men_calories_to_burn
+if women_calories_to_burn != 0:
+    calories_left = women_calories_to_burn
 
+calories_left = round(calories_left)
 
+menu_of_the_day = ""
 
 class Food:
-    def __init__(self, name, calorie, size, unit, healthiness):
+    def __init__(self, name, calorie, serving_size, healthiness):
         self.name = name
         self.calorie = calorie
-        self.size = size
-        self.unit = unit
+        self.serving_size = serving_size
         self.healthiness = healthiness
 
-bread = Food("bread", 90, 1, "ounce", "good")
-yogourt = Food("yogourt", 80, 1, "ounce", "good")
+tea = Food("tea", 45, "1 ounce", "good")
+bread = Food("bread", 90, "1 ounce", "good")
+yogourt = Food("yogourt", 80, "1 ounce", "good")
+breakfast_class = [yogourt, bread, tea]
+breakfast_list = ["bread, yogourt, tea"]
 
-breakfast_list = [yogourt,bread]
-calories_lef = 2000
-
-def getfoodpercalorie(self):
-        return self.calorie
+print("Breakfast Menu:")
+for food in breakfast_class:
+    print(food.name,"("+food.serving_size+"):", food.calorie, "calories")
 
 
 #for each food in your food list check if the food.name is equal to the input string
-
 while True:
-    bf_choice = input("What are you having for breakfast? ")
-    for food in breakfast_list:
-        if food.name == bf_choice:
-            print(food.calorie)
-    else: break
+    while True:
+        bf_choice = input("What are you having for breakfast? (if you want to go to the next meal type 'next meal'> ").lower()
+        if bf_choice == "next meal":
+                break
+        else:
+            for food in breakfast_class:
+                if food.name == bf_choice:
+                    calories_left = calories_left - food.calorie
+                    menu_of_the_day =  menu_of_the_day + " - " + bf_choice
+                    print("You have", calories_left, "left to burn. Do you want to have anything else or just:"+ menu_of_the_day,"?")
+            if any(bf_choice in f for f in breakfast_list):
+                    pass
+            else: print("Not a valid breakfast choice")
+    print("Your current day ingestion:", menu_of_the_day)
+    satisfied = input("Are you satisfied with your current day food?(say 'no' if you want to do over)").upper()
+    if satisfied != "No":
+        break
