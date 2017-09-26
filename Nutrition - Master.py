@@ -2,7 +2,8 @@ print("Hi! welcome to \"Cheff Malony!\" - The first chat bot that suggests meals
       "like a nutrition doctor.\nPlease, answer the following 4 questions in order to know your calories to burn.\n\n ")
 men_calories_to_burn = 0
 women_calories_to_burn = 0
-calories_left = 0
+calories_to_burn = 0
+
 
 #validate Gender
 while True:
@@ -96,13 +97,12 @@ print("\n\nSo, let's get started. We will be segguesting different meals for you
 #Creating a class for food in order to store more than 1 value.
 # Source: https://whatscookingamerica.net/NutritionalChart.htm
 if men_calories_to_burn != 0:
-    calories_left = men_calories_to_burn
+    calories_to_burn = men_calories_to_burn
 if women_calories_to_burn != 0:
-    calories_left = women_calories_to_burn
+    calories_to_burn = women_calories_to_burn
 
-calories_left = round(calories_left)
+calories_left = round(calories_to_burn)
 
-menu_of_the_day = ""
 
 class Food:
     def __init__(self, name, calorie, serving_size, healthiness):
@@ -123,21 +123,28 @@ for food in breakfast_class:
 
 
 #for each food in your food list check if the food.name is equal to the input string
+
+breakfast_of_the_day = ""
+
 while True:
-    while True:
-        bf_choice = input("What are you having for breakfast? (if you want to go to the next meal type 'next meal'> ").lower()
-        if bf_choice == "next meal":
-                break
-        else:
-            for food in breakfast_class:
-                if food.name == bf_choice:
-                    calories_left = calories_left - food.calorie
-                    menu_of_the_day =  menu_of_the_day + " - " + bf_choice
-                    print("You have", calories_left, "left to burn. Do you want to have anything else or just:"+ menu_of_the_day,"?")
-            if any(bf_choice in f for f in breakfast_list):
-                    pass
-            else: print("Not a valid breakfast choice")
-    print("Your current day ingestion:", menu_of_the_day)
-    satisfied = input("Are you satisfied with your current day food?(say 'no' if you want to do over)").upper()
-    if satisfied != "No":
-        break
+    #breakfastime!
+    bf_choice = input("What are you having for breakfast? (if you want to go to the next meal type 'next meal'> ").lower()
+    if bf_choice == "next meal":
+        # if breakfast_of_the_day == None:
+        #     breakfast_of_the_day = "nothing"
+        print("Your current day ingestion:", breakfast_of_the_day)
+        satisfied = input("Are you satisfied with your current day food?(say 'no' if you want to do over)").lower()
+        if satisfied == "no":
+            breakfast_of_the_day = ""
+            calories_left = round(calories_to_burn)
+        elif satisfied != "no":
+            break
+    else:
+        for food in breakfast_class:
+            if food.name == bf_choice:
+                calories_left = calories_left - food.calorie
+                breakfast_of_the_day =  breakfast_of_the_day + " - " + bf_choice
+                print("You have", calories_left, "left to burn. Do you want to have anything else or just:"+ breakfast_of_the_day,"?")
+        if any(bf_choice in f for f in breakfast_list):
+            pass
+        else: print("Not a valid breakfast choice")
