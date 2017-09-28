@@ -107,6 +107,26 @@ calories_left = round(calories_to_burn)
 
 
 
+import csv
+
+class Food:
+    def __init__(self, name, calorie, serving_size, healthiness):
+        self.name = name
+        self.calorie = calorie
+        self.serving_size = serving_size
+        self.healthiness = healthiness
+
+
+breakfast_foods = []
+def open_a_menu_csv(file):
+    with open(file) as foods:
+        dict_reader = csv.DictReader(foods)
+        for row in dict_reader:
+            food = Food(row['name'], int(row['calorie']), row['serving_size'], row['healthiness'])
+            breakfast_foods.append(food)
+
+open_a_menu_csv('foodfb.csv')
+
 print("Breakfast Menu:")
 for food in breakfast_foods:
     print(food.name,"("+food.serving_size+"):", food.calorie, "calories")
@@ -114,16 +134,18 @@ for food in breakfast_foods:
 
 #for each food in your food list check if the food.name is equal to the input string
 
-breakfast_of_the_day = ""
 
+breakfast_of_the_day = ""
 while True:
     #breakfastime!
     bf_choice = input("What are you having for breakfast? (if you want to go to the next meal type 'next meal'> ").lower()
     if bf_choice == "next meal":
-        # if breakfast_of_the_day == None:
-        #     breakfast_of_the_day = "nothing"
+        nobreakfast = False
+        if breakfast_of_the_day == "":
+            breakfast_of_the_day = "Nothing"
+            nobreakfast = True
         print("Your current day ingestion:", breakfast_of_the_day)
-        satisfied = input("Are you satisfied with your current day food?(say 'no' if you want to do over)").lower()
+        satisfied = input("Are you satisfied with your current breakfast(say 'no' if you want to do over)").lower()
         if satisfied == "no":
             breakfast_of_the_day = ""
             calories_left = round(calories_to_burn)
