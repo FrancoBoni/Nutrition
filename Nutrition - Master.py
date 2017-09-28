@@ -4,6 +4,8 @@ men_calories_to_burn = 0
 women_calories_to_burn = 0
 calories_to_burn = 0
 
+from FoodMenuOptions import *
+
 
 #validate Gender
 while True:
@@ -104,21 +106,9 @@ if women_calories_to_burn != 0:
 calories_left = round(calories_to_burn)
 
 
-class Food:
-    def __init__(self, name, calorie, serving_size, healthiness):
-        self.name = name
-        self.calorie = calorie
-        self.serving_size = serving_size
-        self.healthiness = healthiness
-
-tea = Food("tea", 45, "1 ounce", "good")
-bread = Food("bread", 90, "1 ounce", "good")
-yogourt = Food("yogourt", 80, "1 ounce", "good")
-breakfast_class = [yogourt, bread, tea]
-breakfast_list = ["bread, yogourt, tea"]
 
 print("Breakfast Menu:")
-for food in breakfast_class:
+for food in breakfast_foods:
     print(food.name,"("+food.serving_size+"):", food.calorie, "calories")
 
 
@@ -140,11 +130,13 @@ while True:
         elif satisfied != "no":
             break
     else:
-        for food in breakfast_class:
+        found = False
+        for food in breakfast_foods:
             if food.name == bf_choice:
                 calories_left = calories_left - food.calorie
                 breakfast_of_the_day =  breakfast_of_the_day + " - " + bf_choice
                 print("You have", calories_left, "left to burn. Do you want to have anything else or just:"+ breakfast_of_the_day,"?")
-        if any(bf_choice in f for f in breakfast_list):
-            pass
-        else: print("Not a valid breakfast choice")
+                found = True
+        if not found:
+            print("Not a valid breakfast choice")
+
