@@ -202,7 +202,8 @@ open_a_menu_csv('foodfb.csv',tea_foods)
 tea_of_the_day = ""
 
 print("\033[4m\nAre you one of those people who grabs something to eat at tea-time? here are some options:\033[0m")
-
+for food in tea_foods:
+    print(food.name,"("+food.serving_size+"):", food.calorie, "calories")
 
 #Tea-Time!
 while True:
@@ -321,3 +322,17 @@ while True:
 print("\033[4m\nYour final menu of the day is:\033[0m"
       "\nBreakfast:",breakfast_of_the_day,"\nLunch:",lunch_of_the_day,"\nTea-time:",tea_of_the_day,
               "\nDinner:",dinner_of_the_day)
+
+
+calories_burn_of_the_day = calories_to_burn - calories_left
+
+if 200 > calories_left > 0 and bad_choices > 0:
+    print("Great Job! Your calories burn of the day is of", calories_burn_of_the_day, " "
+            "and healthy options too. Nicely done =)" )
+if 200 > calories_left > 0 and bad_choices < 0:
+    print("Good Job! Your calories burn of the day is of", calories_burn_of_the_day, " "
+            "Nevertheless, you should be eating healthier options." )
+if calories_left > 201:
+    print("You should watch out there, you are not eating enogh")
+if calories_left < 0:
+    print("Poorly done. Your Should not be eating this much.")
