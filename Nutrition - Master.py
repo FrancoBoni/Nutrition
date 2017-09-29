@@ -1,7 +1,8 @@
 from NutritionTheory import *
 
-print("Hi! welcome to \"Cheff Malony!\" - The first chat bot that suggests meals based on your calories to burn. "
-      "like a nutrition doctor.\nPlease, answer the following 4 questions in order to know your calories to burn.\n\n ")
+print("Hi! welcome to \033[1m\"Cheff Malony!\"\033[0;0m"" - "
+      "The first chat bot that suggests meals based on your calories to burn "
+      "like a nutrition doctor.\nPlease, answer the following 4 questions in order to know your calories to burn.\n\n")
 men_calories_to_burn = 0
 women_calories_to_burn = 0
 calories_to_burn = 0
@@ -60,11 +61,11 @@ else: pass
 
 
 #startin with your breackfast
-print("\n\nSo, let's get started. We will be segguesting different meals for your day ingest."
-        "Each option is based on a basic serving size but you can order it twice if you love it!\n ")
+print("\n\nSo, let's get started. We will be segguesting different meals for your day ingest.\n"
+        "Each option is based on a basic serving size but you can order it twice if you love it!"
+        "Just type the name of the meal you want to have for us to process your order.\n ")
 
-#Creating a class for food in order to store more than 1 value.
-# Source: https://whatscookingamerica.net/NutritionalChart.htm
+
 if men_calories_to_burn != 0:
     calories_to_burn = men_calories_to_burn
 if women_calories_to_burn != 0:
@@ -82,6 +83,7 @@ for food in breakfast_foods:
     print(food.name,"("+food.serving_size+"):", food.calorie, "calories")
 
 #for each food in your food list check if the food.name is equal to the input string
+
 #breakfastime!
 
 while True:
@@ -98,12 +100,15 @@ while True:
                 breakfast_of_the_day = "Nothing"
                 no_breakfast = True
             print("Your current breakfast ingestion:", breakfast_of_the_day)
-            satisfied = input("Are you satisfied with your current breakfast(say 'no' if you want to do over)>").lower()
+            satisfied = input("Are you satisfied with your current breakfast(say 'no' to do over and "
+                              "'yes' to go the the next meal)>").lower()
             if satisfied == "no":
                 breakfast_of_the_day = ""
                 calories_left = round(calories_to_burn)
-            elif satisfied != "no":
+            if satisfied == "yes":
                 break
+            elif satisfied != "no" or "yes":
+                print("not a valid input")
         else:
             found = False
             for food in breakfast_foods:
@@ -117,12 +122,16 @@ while True:
                 print("Not a valid breakfast choice")
 
 calories_to_burn = calories_left
+
+
 # lunchtime!
 lunch_foods = []
 open_a_menu_csv('foodfl.csv',lunch_foods)
 lunch_of_the_day = ""
 
-print("\033[4m\nSo! Starting to get hungry no? These are the food categories for your lunch meal:\033[0m")
+print("\033[4m\nStarting to get hungry no? These are the food categories for your lunch meal:\033[0m")
+for food in segments:
+    print(food)
 
 while True:
     calorie_limit(calories_left)
@@ -138,12 +147,15 @@ while True:
                 lunch_of_the_day = "Nothing"
                 no_lunch = True
             print("Your current lunch ingestion:", lunch_of_the_day)
-            satisfied = input("Are you satisfied with your current lunch(say 'no' if you want to do over)>").lower()
+            satisfied = input("Are you satisfied with your current lunch(say 'no' to do over and "
+                              "'yes' to go the the next meal").lower()
             if satisfied == "no":
                 lunch_of_the_day = ""
                 calories_left = round(calories_to_burn)
-            elif satisfied != "no":
+            if satisfied == "yes":
                 break
+            elif satisfied != "no" or "yes":
+                print("not a valid input")
         else:
             found = False
             for food in lunch_foods:
@@ -191,12 +203,15 @@ while True:
                 tea_of_the_day = "Nothing"
                 no_tea_time = True
             print("Your current tea-time ingestion:", tea_of_the_day)
-            satisfied = input("Are you satisfied with your current tea-time? (say 'no' if you want to do over)>").lower()
+            satisfied = input("Are you satisfied with your current tea-time? (say 'no' to do over and "
+                              "'yes' to go the the next meal)>").lower()
             if satisfied == "no":
                 tea_of_the_day = ""
                 calories_left = round(calories_to_burn)
-            elif satisfied != "no":
+            if satisfied == "yes":
                 break
+            elif satisfied != "no" or "yes":
+                print("not a valid input")
         else:
             found = False
             for food in tea_foods:
@@ -218,6 +233,8 @@ open_a_menu_csv('foodfl.csv',dinner_foods)
 dinner_of_the_day = ""
 
 print("\033[4m\nLast meal of the day! These are the food categories for your lunch meal:\033[0m")
+for food in segments:
+    print(food)
 
 while True:
     calorie_limit(calories_left)
@@ -228,18 +245,23 @@ while True:
     else:
         segm_choice = input("\nWhat are you having for dinner? you will find options for foods within each category"
                            "(if you want to go to finish type 'finished')> ")
+        recommendation_warning(segm_choice, "chocolates")
+        recommendation_warning(segm_choice,"meats")
         if segm_choice == "finished":
             no_dinner = False
             if dinner_of_the_day == "":
                 dinner_of_the_day = "Nothing"
                 no_dinner = True
             print("Your current dinner ingestion:", dinner_of_the_day)
-            satisfied = input("Are you satisfied with your current dinner(say 'no' if you want to do over)>").lower()
+            satisfied = input("Are you satisfied with your current dinner(say 'no' to do over and "
+                              "'yes' to go the the next meal)>").lower()
             if satisfied == "no":
                 dinner_of_the_day = ""
                 calories_left = round(calories_to_burn)
-            elif satisfied != "no":
+            if satisfied == "yes":
                 break
+            elif satisfied != "no" or "yes":
+                print("not a valid input")
         else:
             found = False
             for food in dinner_foods:
