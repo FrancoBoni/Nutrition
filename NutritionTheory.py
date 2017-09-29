@@ -26,8 +26,6 @@ def validWeight(Weight):
         return False
 
 #calorie count
-
-
 def men_calories_calculator(weight,height,age):
     men = 10*weight + 6.25*height - 5*age + 5
     return men
@@ -52,6 +50,16 @@ def open_a_menu_csv(file,menu_foods):
         for row in dict_reader:
             food = Food(row['name'], int(row['calorie']), row['serving_size'], row['healthiness'],row['segment'])
             menu_foods.append(food)
+
+def calorie_limit(calorie_balance):
+    if -200 <= calorie_balance <= 200:
+        print("Is about to round things up because you have", calorie_balance, "calories balance.")
+    elif calorie_balance < -200:
+        print("\nWe suggest you to close your mouth darling. Your current calorie count is:", calorie_balance,
+              "\nOr you can do over your meal but definetely not having more to eat.")
+        stop = True
+    else:pass
+
 
 segm_choice = ['alcohols','meats','breads','cheeses','chocolates','condiments','oils','fruits','seeds','lambs',
                'pastas','porks','chickens','fishes','vegetables']
