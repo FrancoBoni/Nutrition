@@ -1,19 +1,19 @@
 name,calorie,serving_size,healthiness,segment
-beer light,110,12-ounce can or bottle,not healthy,alcohols
-beer regular,144,12-ounce can or bottle,not healthy,alcohols
-wine red,91,1 wine glass (4 ounces),not healthy,alcohols
-wine white,86,1 wine glass (4 ounces),not healthy,alcohols
-ground beef lean broiled grilled,290,4 ounces (1/4 pound),not healthy,alcohols
-ground beef regular broiled grilled,328,4 ounces (1/4 pound),not healthy,alcohols
+beer-light,110,12-ounce can or bottle,not healthy,alcohols
+beer-regular,144,12-ounce can or bottle,not healthy,alcohols
+red wine,91,1 wine glass (4 ounces),not healthy,alcohols
+white wine,86,1 wine glass (4 ounces),not healthy,alcohols
+ground beef lean,290,4 ounces (1/4 pound),not healthy,alcohols
+ground beef regular,328,4 ounces (1/4 pound),not healthy,alcohols
 pepperoni,27,1 slice,not healthy,alcohols
-porterhouse steak prime grade broiled grilled,55,1 ounce,not healthy,alcohols
-tenderloin steak roast broiled grilled,51,1 ounce,not healthy,alcohols
-tbone steak broiled grilled,50,1 ounce,not healthy,alcohols
-breads all types regular sliced,70,1 slice (1 ounce),healthy,breads
+porterhouse steak,55,1 ounce,not healthy,alcohols
+tenderloin steak,51,1 ounce,not healthy,alcohols
+tbone steak,50,1 ounce,not healthy,alcohols
+bread regular sliced,70,1 slice (1 ounce),healthy,breads
 bread french and sourdough,88,1 slice (1 ounce),healthy,breads
-bread very thin sliced diet,40,1 slice,healthy,breads
-america processed,106,1 ounce,not healthy,cheeses
-blue cheese danish,100,1 ounce,not healthy,cheeses
+bread thin sliced ,40,1 diet slice,healthy,breads
+america,106,1 ounce,not healthy,cheeses
+blue cheese,100,1 ounce,not healthy,cheeses
 brie,85,1 ounce,not healthy,cheeses
 camembert,122,1 ounce,not healthy,cheeses
 cheddar regular,114,1 ounce,not healthy,cheeses
@@ -29,16 +29,16 @@ mozzarella fresh,70,1 ounce,not healthy,cheeses
 parmesan cheese,111,1 ounce,not healthy,cheeses
 parmesan cheese grated,23,1 tablespoon,not healthy,cheeses
 provolone,100,1 ounce,not healthy,cheeses
-ricotta whole milk,49,1 ounce,healthy,cheeses
+ricotta,49,1 ounce,healthy,cheeses
 roquefort,102,1 ounce,not healthy,cheeses
 swiss,100,1 ounce,not healthy,cheeses
-tofu soft silken,22,1 ounce,healthy,cheeses
-tofu firm cotton brick or momen,41,1 ounce,healthy,cheeses
+tofu soft,22,1 ounce,healthy,cheeses
+tofu firm,41,1 ounce,healthy,cheeses
 chocolate semisweet,140,1 ounce,healthy,chocolates
-chocolate dark bittersweet,170,1 ounce,healthy,chocolates
+chocolate dark,170,1 ounce,healthy,chocolates
 chocolate extra dark,180,1 ounce,healthy,chocolates
 chocolate white,162,1 ounce,healthy,chocolates
-chocolate unsweetened baking,135,1 ounce,healthy,chocolates
+chocolate unsweetened,135,1 ounce,healthy,chocolates
 chocolate chips semisweet,80,1 tablespoon,healthy,chocolates
 nutella,200,2 tablespoons,not healthy,chocolates
 cream of tartar,2,1 teaspoon,not healthy,condiments
@@ -47,10 +47,9 @@ mayonnaise regular,100,1 tablespoon,not healthy,condiments
 mayonnaise light,50,1 tablespoon,not healthy,condiments
 mayonnaise reduced fat,20,1 tablespoon,not healthy,condiments
 mayonnaise fat free,11,1 tablespoon,not healthy,condiments
-mayonnaise weight watchers light,50,1 tablespoon,not healthy,condiments
 mustard dijon,18,1 tablespoon,not healthy,condiments
 mustard yellow,10,1 tablespoon,not healthy,condiments
-olives spanish green with pimiento,15,2 olives,healthy,condiments
+olives,15,2 olives,healthy,condiments
 onion powder,5,1 teaspoon,healthy,condiments
 salsa,6,2 tablespoons,healthy,condiments
 sour cream regular,61,2 tablespoons,not healthy,condiments
@@ -60,48 +59,48 @@ vinegar cider,2,1 tablespoon,healthy,condiments
 vinegar balsamic,5,1 tablespoon,healthy,condiments
 wasabi powder,24,1/4 ounce,healthy,condiments
 egg medium,70,1 unit,healthy,eggs
-butter regular salted unsalted,100,1 tablespoon,not healthy,oils
+butter regular,100,1 tablespoon,not healthy,oils
 butter whipped,67,1 tablespoon,not healthy,oils
-oils canola corn olive safflower soybean sesame grapeseed,120,1 tablespoon,healthy,oils
-apple fresh raw,81,1 medium,healthy,fuits
-apricots fresh,51,3 medium,healthy,fuits
-banana fresh,105,1 medium,healthy,fuits
-blueberries fresh,41,1/2 cup,healthy,fuits
-lemon juice fresh,4,1/2 cup,healthy,fuits
-mango fresh,135,1 medium,healthy,fuits
-orange navel fresh,62,1 medium,healthy,fuits
-orange juice fresh,27,1/4 cup,healthy,fuits
-orange juice canned bottled,78,6 ounces,healthy,fuits
-peach fresh,58,1 medium,healthy,fuits
-pear fresh,98,1 medium or large,healthy,fuits
-pineapple juice canned bottled,104,6 ounces,healthy,fuits
-raisins seedless,27,1 tablespoon,healthy,fuits
-raspberry juice canned bottled,120,8 ounces,healthy,fuits
-tangerine fresh,37,1 medium,healthy,fuits
-watermelon fresh,25,1/2 cup diced,healthy,fuits
-chia seeds,65,1 tablespoon,healthy,seeds & spices
-sesame seeds toasted,52,1 tablespoon,healthy,seeds & spices
-sunflower seeds,87,1 ounce,healthy,seeds & spices
+oils,120,1 tablespoon,healthy,oils
+apple,81,1 medium,healthy,fuits
+apricots,51,3 medium,healthy,fuits
+banana,105,1 medium,healthy,fuits
+blueberries,41,1/2 cup,healthy,fuits
+lemon juice,4,1/2 cup,healthy,fuits
+mango,135,1 medium,healthy,fuits
+orange navel,62,1 medium,healthy,fuits
+orange juice,27,1/4 cup,healthy,fuits
+orange juice bottled,78,6 ounces,healthy,fuits
+peach,58,1 medium,healthy,fuits
+pear,98,1 medium or large,healthy,fuits
+pineapple juice bottled,104,6 ounces,healthy,fuits
+raisins,27,1 tablespoon,healthy,fuits
+raspberry juice bottled,120,8 ounces,healthy,fuits
+tangerine,37,1 medium,healthy,fuits
+watermelon,25,1/2 cup diced,healthy,fuits
+chia,65,1 tablespoon,healthy,seeds & spices
+sesame toasted,52,1 tablespoon,healthy,seeds & spices
+sunflower,87,1 ounce,healthy,seeds & spices
 basil fresh,1,2 tablespoons,healthy,seeds & spices
 basil dried,1,5 leaves,healthy,seeds & spices
-capers drained,2,1 tablespoon,healthy,seeds & spices
+capers,2,1 tablespoon,healthy,seeds & spices
 chili powder,24,1 tablespoon,not healthy,seeds & spices
 cinnamon ground,18,1 tablespoon,healthy,seeds & spices
 garlic salt,28,1 tablespoon,healthy,seeds & spices
-oregano dried,18,1 tablespoon,healthy,seeds & spices
+oregano,18,1 tablespoon,healthy,seeds & spices
 paprika,20,1 tablespoon,healthy,seeds & spices
-parsley dried,10,1/2 cup-chopped,healthy,seeds & spices
-pepper black ground,16,1 tablespoon,healthy,seeds & spices
+parsley,10,1/2 cup-chopped,healthy,seeds & spices
+pepper black,16,1 tablespoon,healthy,seeds & spices
 salt,0,1 tablespoon,not healthy,seeds & spices
 lamb blade chop,128,1 chop,healthy,lamb
-lamb loin chop lean,124,3 ounces,healthy,lamb
-lamb rib chop lean,136,3 ounces,healthy,lamb
-lamb shoulder lean,116,3 ounces,healthy,lamb
+lamb loin chop,124,3 ounces,healthy,lamb
+lamb rib chop,136,3 ounces,healthy,lamb
+lamb shoulder,116,3 ounces,healthy,lamb
 liver sausage,100,1 ounce,not healthy,meats
 deer tenderloin,127,3 ounces,healthy,meats
 elk tenderloin,138,3 ounces,healthy,meats
-polish kielbasa healthy choice,80,2 ounces,healthy,meats
-smoked sausage healthy choice,80,2 ounces,healthy,meats
+polish kielbasa,80,2 ounces,healthy,meats
+smoked sausage,80,2 ounces,healthy,meats
 chinese noodles,192,1 cup cooked,not healthy,pasta
 noodles japanese rice,192,1 cup cooked,not healthy,pasta
 pasta,200,2 ounces dry (appx. 1/2 cup),not healthy,pasta
@@ -114,59 +113,57 @@ pasta soba buckwheat,190,2 ounces dry (appx. 1/2 cup),not healthy,pasta
 pasta spelt,190,2 ounces dry (appx. 1/2 cup),not healthy,pasta
 bacon cured raw,174,1.3 ounce,not healthy,porks
 bologna pork,80,1 ounce,healthy,porks
-bratwurst fully cooked,170,2-ounce link,not healthy,porks
-ham cured butt lean,159,3.5 ounces,not healthy,porks
-ham fresh lean,45,1 ounce slice,not healthy,porks
+bratwurst,170,2-ounce link,not healthy,porks
+ham cured butt,159,3.5 ounces,not healthy,porks
+ham fresh,45,1 ounce slice,not healthy,porks
 center cut,166,2.5 ounces,healthy,porks
 top loin chops,171,3 ounces,healthy,porks
 rib chops,186,3 ounces,healthy,porks
 pork sausage,92,1 patty (raw),not healthy,porks
-loin tenderlooin roast,165,3 ounces,not healthy,porks
-rib roast,182,3 ounces,not healthy,porks
-tenderloin roast,130,3 ounces,healthy,porks
+loin tenderloin,165,3 ounces,not healthy,porks
+rib,182,3 ounces,not healthy,porks
+tenderloin,130,3 ounces,healthy,porks
 chicken breast,142,1/2 breast,healthy,chickens
 chicken leg,76,1 leg or drumstick,healthy,chickens
-chicken meat roasted,241,1 cup (chopped or diced),healthy,chickens
-chicken whole meat only raw,1006,2 pounds,healthy,chickens
+chicken meat,241,1 cup (chopped or diced),healthy,chickens
 chicken thigh,109,1 thigh,healthy,chickens
-turkey breast roasted,115,3.5 ounce,healthy,chickens
+turkey breast,115,3.5 ounce,healthy,chickens
 anchovy fillets,42,5 medium each (appx .7 oz),healthy,seafoods
 clams raw,133,9 large or 20 small,healthy,seafoods
 clams canned,236,1 cup w/liquid,healthy,seafoods
 cod,85,3.5 ounces,healthy,seafoods
-crab meat cooked,90,3 ounces,healthy,seafoods
+crab meat,90,3 ounces,healthy,seafoods
 lobster,33,1 ounce,healthy,seafoods
-salmon atlantic,155,3 ounces,healthy,seafoods
-scallops raw,26,2 large or 5 small,healthy,seafoods
+salmon,155,3 ounces,healthy,seafoods
+scallops,26,2 large or 5 small,healthy,seafoods
 shrimp prawns,90,3 ounces,healthy,seafoods
 shrimp canned and drained,25,1 ounce,healthy,seafoods
 trout rainbow,195,3.5 ounces,healthy,seafoods
 tuna fresh,177,3.5 ounces,healthy,seafoods
-tuna solid white canned in water,90,3-ounce can or pouch,healthy,seafoods
-asparagus raw,13,4 spears,healthy,vegetables
-beans green fresh,22,1/2 cup,healthy,vegetables
-beans garbanzo chick peas canned,80,1/2 cup,healthy,vegetables
+tuna canned,90,3-ounce can or pouch,healthy,seafoods
+asparagus,13,4 spears,healthy,vegetables
+beans green,22,1/2 cup,healthy,vegetables
+garbanzo canned,80,1/2 cup,healthy,vegetables
 broccoli,42,1 medium stalk or spear,healthy,vegetables
 brussels sprouts,12,1 ounce,healthy,vegetables
 cabbage green raw,28,1/2 cup shredded,healthy,vegetables
 carrot raw,25,1 medium,healthy,vegetables
 cauliflower,3,1 floweret,healthy,vegetables
 celery,6,1 medium stalk or rib,healthy,vegetables
-chiles green canned diced,10,2 tablespoons,healthy,vegetables
-corn fresh yellow white raw,66,1/2 cup kernels,healthy,vegetables
+chiles green canned,10,2 tablespoons,healthy,vegetables
+corn fresh,66,1/2 cup kernels,healthy,vegetables
 cucumber,39,1 medium to large,healthy,vegetables
 eggplant raw,27,1 medium,healthy,vegetables
 garlic,4,1 clove,healthy,vegetables
-kale raw chopped,14,1 ounce,healthy,vegetables
-lettuce bibb boston butterhead,21,1 head 7.75 oz),healthy,vegetables
+kale raw,14,1 ounce,healthy,vegetables
+lettuce,21,1 head 7.75 oz),healthy,vegetables
 mushrooms white brown raw,20,5 medium,healthy,vegetables
 onion,30,1/2 cup-chopped,healthy,vegetables
-peas green snap,67,1/2 cup,healthy,vegetables
-peas blackeyed cooked,99,1/2 cup,healthy,vegetables
+peas green,67,1/2 cup,healthy,vegetables
+peas blackeyed,99,1/2 cup,healthy,vegetables
 peas snow sugar,34,1/2 cup,healthy,vegetables
 pepper chile,20,1 pepper,healthy,vegetables
 potato baked with skin,161,1 medium (6.1 oz),not healthy,vegetables
-potato sweet baked with skin,136,1 medium (6.3 oz),not healthy,vegetables
 pumpkin canned,40,1/2 cup,healthy,vegetables
 radish,1,1 large (.3 oz),healthy,vegetables
 spinach raw,78,1 bunch (12 oz),healthy,vegetables
