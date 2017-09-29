@@ -1,36 +1,37 @@
-name,calorie,serving_size,healthiness
-bread,70,1 slice (1 ounce),not healthy,
-bread - diet,40,1 slice,healthy,
-corn Flakes,100,1 cup,healthy,
-raisin Bran,186,1 cup,healthy,
-dulce de Leche,63,1 ounce,not healthy,
-cream Cheese - regular,99,1 ounce,not healthy,
-cream Cheese - light,65,1 ounce,healthy,
-cocoa (dry powder) unsweetened,12,1 tablespoon,not healthy,
-almond Milk ,60,1 cup,healthy,
-chocolate Milk,210,1 cup,not healthy,
-milk - whole,157,1 cup,healthy,
-milk - 2% fat,121,1 cup,healthy,
-yogurt - Plain (regular),139,1 cup,healthy,
-yogurt - Plain (low fat),144,1 cup,healthy,
-egg,70,1 unit,healthy,
-butter -regular,33,1 teaspoon,not healthy,
-apple (fresh or raw),81,1 medium,healthy,
-apricots (fresh),51,3 medium,healthy,
-banana - fresh,105,1 medium,healthy,
-blueberries - fresh,41,1/2 cup,healthy,
-lemon Juice - fresh,4,1/2 cup,healthy,
-mango - fresh,135,1 medium,healthy,
-orange - navel - fresh,62,1 medium,healthy,
-orange Juice - fresh,27,1/4 cup,healthy,
-orange Juice - canned or bottled,78,6 ounces,healthy,
-peach - fresh,58,1 medium,healthy,
-pear - fresh,98,1 medium or large,healthy,
-pineapple Juice - canned or bottled,104,6 ounces,healthy,
-raisins - seedless,27,1 tablespoon,healthy,
-raspberry Juice - canned or bottled,120,8 ounces,healthy,
-tangerine - fresh,37,1 medium,healthy,
-watermelon - fresh,25,1/2 cup diced,healthy,
-almonds - whole - dry roasted,36,6 units,healthy,
-cashews - dry roasted,162,1 ounce,healthy,
-pistachios,20,6 units,healthy,
+name,calorie,serving_size,healthiness,segment
+bread,70,1 slice (1 ounce),not healthy,none
+bread-diet,40,1 slice,healthy,none
+corn flakes,100,1 cup,healthy,none
+raisin bran,186,1 cup,healthy,none
+dulce de Leche,63,1 ounce,not healthy,none
+cream cheese-regular,99,1 ounce,not healthy,none
+cream cheese-light,65,1 ounce,healthy,none
+cocoa,12,1 tablespoon(dry powder)-unsweetened,not healthy,none
+almond milk ,60,1 cup,healthy,none
+chocolate milk,210,1 cup,not healthy,none
+milk-whole,157,1 cup,healthy,none
+milk-2%fat,121,1 cup,healthy,none
+yogurt-plain(regular),139,1 cup,healthy,none
+yogurt-plain(low fat),144,1 cup,healthy,none
+egg,70,1 unit,healthy,none
+butter,33,1 teaspoon,not healthy,none
+apple,81,1 medium,healthy,none
+apricots,51,3 medium,healthy,none
+banana,105,1 medium,healthy,none
+blueberries,41,1/2 cup,healthy,none
+lemon juice,4,1/2 cup,healthy,none
+mango,135,1 medium,healthy,none
+orange,62,1 medium,healthy,none
+orange juice-fresh,27,1/4 cup,healthy,none
+orange juice-bottled,78,6 ounces,healthy,none
+peach,58,1 medium,healthy,none
+pear,98,1 medium or large,healthy,none
+pineapple juice-bottled,104,6 ounces,healthy,none
+raisins,27,1 tablespoon,healthy,none
+raspberry juice-bottled,120,8 ounces,healthy,none
+tangerine,37,1 medium,healthy,none
+watermelon,25,1/2 cup diced,healthy,none
+almonds,36,6 units,healthy,none
+cashews,162,1 ounce,healthy,none
+pistachios,20,6 units,healthy,none
+tea,1,1cup,healthy,none
