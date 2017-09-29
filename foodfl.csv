@@ -3,17 +3,17 @@ beer-light,110,12-ounce can or bottle,not healthy,alcohols
 beer-regular,144,12-ounce can or bottle,not healthy,alcohols
 red wine,91,1 wine glass (4 ounces),not healthy,alcohols
 white wine,86,1 wine glass (4 ounces),not healthy,alcohols
-ground beef lean,290,4 ounces (1/4 pound),not healthy,alcohols
-ground beef regular,328,4 ounces (1/4 pound),not healthy,alcohols
-pepperoni,27,1 slice,not healthy,alcohols
-porterhouse steak,55,1 ounce,not healthy,alcohols
-tenderloin steak,51,1 ounce,not healthy,alcohols
-tbone steak,50,1 ounce,not healthy,alcohols
+ground beef lean,290,4 ounces (1/4 pound),not healthy,meats
+ground beef regular,328,4 ounces (1/4 pound),not healthy,meats
+pepperoni,27,1 slice,not healthy,meats
+porterhouse steak,55,1 ounce,not healthy,meats
+tenderloin steak,51,1 ounce,not healthy,meats
+tbone steak,50,1 ounce,not healthy,meats
 bread regular sliced,70,1 slice (1 ounce),healthy,breads
 bread french and sourdough,88,1 slice (1 ounce),healthy,breads
 bread thin sliced ,40,1 diet slice,healthy,breads
 america,106,1 ounce,not healthy,cheeses
-blue cheese,100,1 ounce,not healthy,cheeses
+blue,100,1 ounce,not healthy,cheeses
 brie,85,1 ounce,not healthy,cheeses
 camembert,122,1 ounce,not healthy,cheeses
 cheddar regular,114,1 ounce,not healthy,cheeses
@@ -21,13 +21,13 @@ cheddar low fat,80,1 ounce,not healthy,cheeses
 cream cheese regular,99,1 ounce,not healthy,cheeses
 cream cheese light low fat,65,1 ounce,healthy,cheeses
 cream cheese fat-free,27,1 ounce,not healthy,cheeses
-fontina cheese,110,1 ounce,not healthy,cheeses
+fontina,110,1 ounce,not healthy,cheeses
 gouda,101,1 ounce,not healthy,cheeses
 gruyere,117,1 ounce,not healthy,cheeses
 mozzarella whole milk,80,1 ounce,not healthy,cheeses
 mozzarella fresh,70,1 ounce,not healthy,cheeses
-parmesan cheese,111,1 ounce,not healthy,cheeses
-parmesan cheese grated,23,1 tablespoon,not healthy,cheeses
+parmesan,111,1 ounce,not healthy,cheeses
+parmesan grated,23,1 tablespoon,not healthy,cheeses
 provolone,100,1 ounce,not healthy,cheeses
 ricotta,49,1 ounce,healthy,cheeses
 roquefort,102,1 ounce,not healthy,cheeses
@@ -92,10 +92,10 @@ paprika,20,1 tablespoon,healthy,seeds & spices
 parsley,10,1/2 cup-chopped,healthy,seeds & spices
 pepper black,16,1 tablespoon,healthy,seeds & spices
 salt,0,1 tablespoon,not healthy,seeds & spices
-lamb blade chop,128,1 chop,healthy,lamb
-lamb loin chop,124,3 ounces,healthy,lamb
-lamb rib chop,136,3 ounces,healthy,lamb
-lamb shoulder,116,3 ounces,healthy,lamb
+lamb blade chop,128,1 chop,healthy,lambs
+lamb loin chop,124,3 ounces,healthy,lambs
+lamb rib chop,136,3 ounces,healthy,lambs
+lamb shoulder,116,3 ounces,healthy,lambs
 liver sausage,100,1 ounce,not healthy,meats
 deer tenderloin,127,3 ounces,healthy,meats
 elk tenderloin,138,3 ounces,healthy,meats
