@@ -6,6 +6,7 @@ print("Hi! welcome to \033[1m\"Cheff Malony!\"\033[0;0m"" - "
 men_calories_to_burn = 0
 women_calories_to_burn = 0
 calories_to_burn = 0
+bad_choices = 0
 
 #validate Gender
 while True:
@@ -94,21 +95,28 @@ while True:
     else:
         bf_choice = input("\nWhat are you having for breakfast?"
                           "(if you want to go to the next meal type 'next meal'> ").lower()
+        if is_healthy_warning(breakfast_foods, bf_choice):
+            bad_choices += 1
+        else:
+            bad_choices -= 1
         if bf_choice == "next meal":
             no_breakfast = False
             if breakfast_of_the_day == "":
                 breakfast_of_the_day = "Nothing"
                 no_breakfast = True
             print("Your current breakfast ingestion:", breakfast_of_the_day)
+            if bad_choices < 0:
+                print("You have more unhealthy choices than healthy ones. Watch out")
             satisfied = input("Are you satisfied with your current breakfast(say 'no' to do over and "
                               "'yes' to go the the next meal)>").lower()
+            satis = False
             if satisfied == "no":
                 breakfast_of_the_day = ""
                 calories_left = round(calories_to_burn)
+            satis = True
             if satisfied == "yes":
+                satis = True
                 break
-            elif satisfied != "no" or "yes":
-                print("not a valid input")
         else:
             found = False
             for food in breakfast_foods:
@@ -129,9 +137,8 @@ lunch_foods = []
 open_a_menu_csv('foodfl.csv',lunch_foods)
 lunch_of_the_day = ""
 
-print("\033[4m\nStarting to get hungry no? These are the food categories for your lunch meal:\033[0m")
-for food in segments:
-    print(food)
+print("\033[4m\nStarting to get hungry no? You will find categories of foods for your lunch meal:\033[0m")
+
 
 while True:
     calorie_limit(calories_left)
@@ -139,6 +146,8 @@ while True:
         print("\nYour final meal of the day is:", "\nBreakfast:",breakfast_of_the_day, "\nLunch:", lunch_of_the_day)
         break
     else:
+        for food in segments:
+            print(food)
         segm_choice = input("\nWhat are you having for lunch? you will find options for foods within each category"
                            "(if you want to go to the next meal type 'next meal')> ")
         if segm_choice == "next meal":
@@ -147,15 +156,18 @@ while True:
                 lunch_of_the_day = "Nothing"
                 no_lunch = True
             print("Your current lunch ingestion:", lunch_of_the_day)
+            if bad_choices < 0:
+                print("You have more unhealthy choices than healthy ones. Watch out")
             satisfied = input("Are you satisfied with your current lunch(say 'no' to do over and "
                               "'yes' to go the the next meal").lower()
+            satis = False
             if satisfied == "no":
                 lunch_of_the_day = ""
                 calories_left = round(calories_to_burn)
+            satis = True
             if satisfied == "yes":
+                satis = True
                 break
-            elif satisfied != "no" or "yes":
-                print("not a valid input")
         else:
             found = False
             for food in lunch_foods:
@@ -167,6 +179,10 @@ while True:
             if found:
                 found = False
                 lunch_choice = input("\nWhat food are you having for lunch?>")
+                if is_healthy_warning(lunch_foods, lunch_choice):
+                    bad_choices += 1
+                else:
+                    bad_choices -= 1
                 for food in lunch_foods:
                     if food.name == lunch_choice:
                         calories_left = calories_left - food.calorie
@@ -197,21 +213,28 @@ while True:
     else:
         tt_choice = input("\nWhat are you having for tea-time? "
                           "(if you want to go to the next meal type 'next meal'> ").lower()
+        if is_healthy_warning(tea_foods, tt_choice):
+            bad_choices += 1
+        else:
+            bad_choices -= 1
         if tt_choice == "next meal":
             no_tea_time = False
             if tea_of_the_day == "":
                 tea_of_the_day = "Nothing"
                 no_tea_time = True
             print("Your current tea-time ingestion:", tea_of_the_day)
+            if bad_choices < 0:
+                print("You have more unhealthy choices than healthy ones. Watch out")
             satisfied = input("Are you satisfied with your current tea-time? (say 'no' to do over and "
                               "'yes' to go the the next meal)>").lower()
+            satis = False
             if satisfied == "no":
                 tea_of_the_day = ""
                 calories_left = round(calories_to_burn)
+            satis = True
             if satisfied == "yes":
+                satis = True
                 break
-            elif satisfied != "no" or "yes":
-                print("not a valid input")
         else:
             found = False
             for food in tea_foods:
@@ -232,9 +255,8 @@ dinner_foods = []
 open_a_menu_csv('foodfl.csv',dinner_foods)
 dinner_of_the_day = ""
 
-print("\033[4m\nLast meal of the day! These are the food categories for your lunch meal:\033[0m")
-for food in segments:
-    print(food)
+print("\033[4m\nStarting to get hungry no? You will find categories of foods for your dinner meal:\033[0m")
+
 
 while True:
     calorie_limit(calories_left)
@@ -243,6 +265,8 @@ while True:
               "Dinner:",dinner_of_the_day)
         break
     else:
+        for food in segments:
+            print(food)
         segm_choice = input("\nWhat are you having for dinner? you will find options for foods within each category"
                            "(if you want to go to finish type 'finished')> ")
         recommendation_warning(segm_choice, "chocolates")
@@ -253,15 +277,18 @@ while True:
                 dinner_of_the_day = "Nothing"
                 no_dinner = True
             print("Your current dinner ingestion:", dinner_of_the_day)
+            if bad_choices < 0:
+                print("You have more unhealthy choices than healthy ones. Watch out")
             satisfied = input("Are you satisfied with your current dinner(say 'no' to do over and "
                               "'yes' to go the the next meal)>").lower()
+            satis = False
             if satisfied == "no":
                 dinner_of_the_day = ""
                 calories_left = round(calories_to_burn)
+            satis = True
             if satisfied == "yes":
+                satis = True
                 break
-            elif satisfied != "no" or "yes":
-                print("not a valid input")
         else:
             found = False
             for food in dinner_foods:
@@ -273,6 +300,10 @@ while True:
             if found:
                 found = False
                 dinner_choice = input("\nWhat food are you having for dinner?>")
+                if is_healthy_warning(dinner_foods, dinner_choice):
+                    bad_choices += 1
+                else:
+                    bad_choices -= 1
                 for food in dinner_foods:
                     if food.name == dinner_choice:
                         calories_left = calories_left - food.calorie
@@ -282,6 +313,7 @@ while True:
                         found = True
             if not found:
                 print("not a valid input")
+
 
 
 print("\033[4m\nYour final menu of the day is:\033[0m"
