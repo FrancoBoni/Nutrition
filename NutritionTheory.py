@@ -66,10 +66,19 @@ def recommendation_warning(the_input,the_string):
     if the_input == the_string:
         print("We don't recommend eating",the_string,"at night but is your call...")
 
-def healthy_warning(menu_of_the_day):
-    for food in menu_of_the_day:
-        if food.healthiness is "healthy" > food.healthiness is "not healthy":
-            print("Watch out with what you are eating, ")
+def is_healthy_warning(meal_foods,choice):
+    for food in meal_foods:
+        if food.name == choice:
+            if food.healthiness == "not healthy":
+                return False
+    for food in meal_foods:
+        if food.name == choice:
+            if food.healthiness == "healthy":
+                return True
+
+
+
+
 
 
 segments = ['alcohols','meats','breads','cheeses','chocolates','condiments','oils','fruits','seeds','lambs',
