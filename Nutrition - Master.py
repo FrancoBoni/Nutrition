@@ -124,13 +124,13 @@ while True:
                     calories_left = calories_left - food.calorie
                     breakfast_of_the_day =  breakfast_of_the_day + " - " + bf_choice
                     print("You have", calories_left, "left to burn. Do you want to have anything else or just:"
-                          + breakfast_of_the_day,"?>")
+                          + breakfast_of_the_day,"?")
                     found = True
             if not found:
                 print("Not a valid breakfast choice")
 
 calories_to_burn = calories_left
-
+bad_choices = 0
 
 # lunchtime!
 lunch_foods = []
@@ -188,12 +188,13 @@ while True:
                         calories_left = calories_left - food.calorie
                         lunch_of_the_day = lunch_of_the_day + " - " + lunch_choice
                         print("You have", calories_left,
-                              "left to burn. Do you want to have anything else or just:" + lunch_of_the_day, "?>")
+                              "left to burn. Do you want to have anything else or just:" + lunch_of_the_day, "?")
                         found = True
             if not found:
                 print("not a valid input")
 
 calories_to_burn = calories_left
+bad_choices = 0
 print("\nBreakfast:",breakfast_of_the_day, "\nLunch:", lunch_of_the_day)
 
 tea_foods = []
@@ -242,12 +243,13 @@ while True:
                     calories_left = calories_left - food.calorie
                     tea_of_the_day =  tea_of_the_day + " - " + tt_choice
                     print("You have", calories_left, "left to burn. "
-                        "Do you want to have anything else or just:"+ tea_of_the_day,"?>")
+                        "Do you want to have anything else or just:"+ tea_of_the_day,"?")
                     found = True
             if not found:
                 print("Not a valid tea-time choice")
 
 calories_to_burn = calories_left
+bad_choices = 0
 print("\nBreakfast:",breakfast_of_the_day,"\nLunch:",lunch_of_the_day,"\nTea-time:",tea_of_the_day)
 
 # Dinner!
