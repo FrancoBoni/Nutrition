@@ -77,9 +77,5 @@ def is_healthy_warning(meal_foods,choice):
                 return True
 
 
-
-
-
-
 segments = ['alcohols','meats','breads','cheeses','chocolates','condiments','oils','fruits','seeds','lambs',
-               'pastas','porks','chickens','fishes','vegetables']
+               'pastas','porks','chickens','seafoods','vegetables']
